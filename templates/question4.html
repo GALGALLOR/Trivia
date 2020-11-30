@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css') }}">
+</head>
+
+{% if message=='no' %}
+<style>
+    h2{
+        margin-top: 0;
+    }
+</style>
+{%endif%}
+
+{% if answers=='no' %}
+<style>
+    h2{
+        margin-top: 0;
+    }
+</style>
+{%endif%}
+
+<body>
+ <form method="post">
+
+
+<div class="question4">
+    <h1> Question 4 out of 4</h1>
+    {%if message =='no' %}
+    <h1 class='wrongq1' >Wrong!Try again!</h1>
+    {%endif%}
+    {%if answers =='no' %}
+    <h1 class='wrongq1' >You need to answer all the questions</h1>
+    {%endif%}
+    <h2> How many countries does the river nile pass through ? </h2>
+    <div class='answers'>
+        <input type="radio" value="11" name="nile" id="11" >
+        <label class="answerlabel" for="11" >11</label><br>
+        <input  type="radio" value="5" name="nile" id="5" >
+        <label class="answerlabel" for="5">5</label><br>
+        <input type="radio" value="8" name="nile" id="8" >
+        <label class="answerlabel" for="8" > 8</label><br>
+        </div>
+       
+        
+</div>
+
+<a class='back' href = '/Question3'> Back </a>
+<input type="submit" value="next" id='mae'>
+ </form>
+</body>
+</html>

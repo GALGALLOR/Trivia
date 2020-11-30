@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href="{{url_for('static',filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>done</title>
+</head>
+
+<style>
+    th,td{
+        margin:2cm;
+        border-bottom:1px solid black;
+        border-left:1px solid black;
+    }
+
+    table{
+        background:rgb(44, 165, 98);
+        margin:2cm;
+        border:1px solid black;
+    }
+    td{
+        padding-right:2cm;
+        padding-left:2cm;
+    }
+
+</style>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a id='listHome' href='/home'> home </a> </li>
+            <li><a href='' >about</a></li>
+            <li><a href=''>contact us</a> </li>
+        </ul>
+    </div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Marks</th>
+            <th>Out of:</th>
+        </tr>
+        {%for data in names%}
+        <tr>
+            <td>{{data[0]}}</td>
+            <td>{{data[1]}}</td>
+            <td>4</td>
+        </tr>
+        {%endfor%}
+    </table>
+    <form method='post'>
+        <input type='submit' id='startagain' value='Start again'>
+    </form>
+</body>
+</html>

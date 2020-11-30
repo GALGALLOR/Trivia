@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css') }}">
+</head>
+
+{% if message=='no' %}
+<style>
+    h2{
+        margin-top: 0;
+    }
+</style>
+{%endif%}
+
+{% if answers=='no' %}
+<style>
+    h2{
+        margin-top: 0;
+    }
+</style>
+{%endif%}
+
+<body>
+ <form method="post">
+
+
+<div class="question3">
+    <h1> Question 3 out of 3 </h1>
+    {%if message =='no' %}
+    <h1 class='wrongq1' >Wrong!Try again!</h1>
+    {%endif%}
+    {%if answers =='no' %}
+    <h1 class='wrongq1' >You need to answer all the questions</h1>
+    {%endif%}
+    <h2> how old is obama </h2>
+    <div class='answers'>
+        <input type="radio" value="49" name="ageobama" id="49" >
+        <label class="answerlabel" for="49" >49</label><br>
+        <input  type="radio" value="59" name="ageobama" id="59" >
+        <label class="answerlabel" for="59">59</label><br>
+        <input type="radio" value="69" name="ageobama" id="69" >
+        <label class="answerlabel" for="69" > 69</label><br>
+        </div>
+
+</div>
+<a class='back' href = '/Question2'> Back </a>
+<input type="submit" value="next" id='mae'>
+ </form>
+</body>
+</html>

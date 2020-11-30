@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css') }}">
+</head>
+
+{% if message=='no' %}
+<style>
+    h2{
+        margin-top: 0;
+    }
+</style>
+{%endif%}
+
+{% if answers=='no' %}
+<style>
+    h2{
+        margin-top: 0;
+    }
+</style>
+{%endif%}
+
+<body>
+ <form method="post">
+
+
+<div class="question2">
+    <h1> Question2 out of 2 </h1>
+    {%if message =='no' %}
+    <h1 class='wrongq1' >Wrong!Try again!</h1>
+    {%endif%}
+    {%if answers =='no' %}
+    <h1 class='wrongq1' >You need to answer all the questions</h1>
+    {%endif%}
+    <h2> When was the first world war? </h2>
+    <div class='answers'>
+    <input type="radio" value="2020" name="ww1" id="2020" >
+    <label class="answerlabel" for="2020" >2020</label><br>
+    <input  type="radio" value="1918" name="ww1" id="1918" >
+    <label class="answerlabel" for="1918">1918</label><br>
+    <input type="radio" value="1944" name="ww1" id="1944" >
+    <label class="answerlabel" for="1944" > 1944</label><br>
+    </div>
+    
+</div>
+<a class='back' href = '/Question1'> Back </a>
+<input type="submit" value="next" id='mae'>
+ </form>
+</body>
+</html>
