@@ -10,9 +10,12 @@ body{
 .headerHome h1{
 	text-align:center;
 	color:#50728F;
+	font-family:'Times New Roman', Times, serif;
+	font-size:50px;
 }
 .headerHome h2{
 	margin-left: 50px;
+	font-family:'Times New Roman', Times, serif;
 }
 
 .begin{
@@ -20,27 +23,31 @@ body{
 	margin-left:250px;
 	border:3px solid #334351 ;
 	padding:30px 0 30px 0;
-	width:320px;
+	width:500px;
 	text-align:center;
 	box-sizing: border-box;
 	background:#50728F;
 	opacity:0.9;
+	
 }
 
 .begin form input[type='text']{
 	background:#447723;
 	padding:10px;
+	width:350px;
 	padding-right:130px;
 	border:1px solid green;
 	transition:.5s;
+	font-size:30px;
 }
-.begin form input[type='submit']{
+.begin form input[type='submit']  {
 	background:#D9CD1E;
 	color:blue;
 	width:100px;
 	height:40px;
 	margin-top:20px;
 	transition:.5s;
+	font-size: 20px;
 }
 
 #iii::placeholder{
@@ -53,7 +60,13 @@ body{
 	padding-left:50px;
 	
 }
-
+.wrongq1{
+	background:red;
+	color:white;
+	width:300px;
+	text-align:center;
+	margin-left:40px;
+}
 .begin form input[type='submit']:hover{
 	background:#06E2ED;
 	text-transform: uppercase;
@@ -66,21 +79,10 @@ body{
 /*homepage end*/
 
 
-input[type='checkbox']{
-	display:none;
-}
 
 
 
 /*question1*/
-
-.question2,.question3,.question4{
-	display:none;
-}
-
-#next:checked ~ .question1,.question3,.question4{
-	display: none;
-}
 
 h2{
 	text-align:center;
@@ -92,10 +94,6 @@ h2{
 	opacity:0.9;
 	font-size:50px;
 }
-
-
-
-
 
 #firstnext,#next2,#next3{
 	font-size:50px;
@@ -113,12 +111,7 @@ h2{
 
 }
 
-#next2:checked ~ .question1 , .question2 ,.question4{
-	display:none;
-}
-#next2:checked ~ .question3{
-	display:block;
-}
+
 
 #firstnext:hover,#next2:hover,#next3:hover{
 	background:#F2F246;
@@ -154,9 +147,7 @@ h2{
 
 /*question2*/
 
-#next:checked ~ .question2{
-	display:block;
-}
+
 
 #firstback,#back2,#back3{
 	font-size:50px;
@@ -177,7 +168,7 @@ h2{
 
 
 
-#mae {
+#mae , .back {
 	transition: 1s;
 	background:rgb(23, 21, 170);
 	padding:30px 70px;
@@ -187,16 +178,55 @@ h2{
 	margin-left:300px;
 }
 
- #mae:hover{
+ #mae:hover ,.back:hover {
 	background:rgb(252, 255, 58);
 	padding:40px 100px;
 	font-size:70px;
 	color:black;
 }
+.back{
+	float:left;
+	margin-left:10px;
+	text-decoration: none;
+}
 
-/* question3*/
+#mae{
+	float:right;
+	margin-right:30px;
+}
 
 
+.navbar{
 
+	margin-top:0;
+	padding:0.5cm;
+	background:rgb(155, 61, 61);
+	
+}
 
-/*question4*/
+li{
+	list-style-type: none;
+	display:inline-block;
+	margin-top:0;
+	padding-left:2cm;
+}
+
+a{
+	text-decoration: none;
+	color:black;
+	font-size:30px;
+}
+#startagain{
+	background:rgb(102, 128, 216);
+	padding:10px;
+	margin-left:25%;
+	font-size:20px;
+	color:black;
+	transition:1s;
+	border:1px solid darkcyan;
+}
+#startagain:hover{
+	padding:20px;
+	background:rgb(99, 224, 99);
+	color:blue;
+}
