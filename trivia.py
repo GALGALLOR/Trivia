@@ -134,6 +134,12 @@ def done():
 		except:
 			return redirect(url_for('home'))
 
+@app.route('/leaderboard')
+def leaderboard():
+	cursor = mydb.connection.cursor()
+	cursor.execute('SELECT names,score FROM UserData ORDER BY score DESC ')
+	names=cursor.fetchall()
+	return render_template('leaderboard.html',names=names,marks=marks)
 
 @app.route('/logout')
 def logout():
