@@ -1,7 +1,7 @@
 body{
 	font-family:sans-serif;
 	background:url('https://image.freepik.com/free-photo/big-tree-with-two-chairs-lake-take-rest-relaxing-scene-nature_28586-149.jpg') no-repeat ;
-	background-size: 1350px 650px;	
+	background-size: 1350px 690px;	
 	margin:0;
 	padding:0;
 
@@ -23,7 +23,7 @@ body{
 }
 .headerHome h2{
 	border-radius: 1cm;
-	padding:50px 50px 30px 50px;
+	padding:40px 50px 30px 50px;
 	margin-left: 50px;
 	font-family:'Times New Roman', Times, serif;
 }
@@ -38,6 +38,7 @@ body{
 	box-sizing: border-box;
 	background:#50728F;
 	opacity:0.9;
+	margin-bottom:20px;
 	
 }
 
@@ -143,7 +144,7 @@ h2{
 
 .answerlabel{
 	border:1px solid yellow;
-	padding-right:400px;
+	padding-right:200px;
 	border-right:none;
 	padding-left:50px;
 	transition:0.5s;
@@ -303,6 +304,11 @@ td{
 		width:100%;
 		margin-left:0;
 	}
+	.headerHome h1{
+		width:100%;
+		margin:0;
+	}
+
 	.headerHome h2 {
 		font-size:20px;
 		border-radius:0;

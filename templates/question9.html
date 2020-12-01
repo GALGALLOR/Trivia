@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css') }}">
+    <link rel='icon' href='https://previews.123rf.com/images/niyazz/niyazz1309/niyazz130900306/22046368-letters-and-symbols-in-fire-letter-t-.jpg'>
+
+</head>
+
+{% if message=='no' %}
+<style>
+    h2{
+        margin-top: 0;
+    }
+</style>
+{%endif%}
+
+{% if answers=='no' %}
+<style>
+    h2{
+        margin-top: 0;
+    }
+</style>
+{%endif%}
+
+<body>
+ <form method="post">
+
+
+<div class="question9">
+    <h1> Question 9/10</h1>
+    {%if message =='no' %}
+    <h1 class='wrongq1' >Wrong!Try again!</h1>
+    {%endif%}
+    {%if answers =='no' %}
+    <h1 class='wrongq1' >You need to answer all the questions</h1>
+    {%endif%}
+    <h2> How many YEARS did it take to build the Great Wall of China ? </h2>
+    <div class='answers'>
+        <input type="radio" value="2000" name="china" id="2000" >
+        <label class="answerlabel" for="2000" >2000</label><br>
+        <input  type="radio" value="200" name="china" id="200" >
+        <label class="answerlabel" for="200">200</label><br>
+        <input type="radio" value="20" name="china" id="20" >
+        <label class="answerlabel" for="20" > 20</label><br>
+        </div>
+       
+        
+</div>
+
+<a class='back' href = '/Question8'> Back </a>
+<input type="submit" value="next" id='mae'>
+ </form>
+</body>
+</html>

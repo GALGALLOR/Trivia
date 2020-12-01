@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css') }}">
+    <link rel='icon' href='https://previews.123rf.com/images/niyazz/niyazz1309/niyazz130900306/22046368-letters-and-symbols-in-fire-letter-t-.jpg'>
+
+</head>
+
+{% if message=='no' %}
+<style>
+    h2{
+        margin-top: 0;
+    }
+</style>
+{%endif%}
+
+{% if answers=='no' %}
+<style>
+    h2{
+        margin-top: 0;
+    }
+</style>
+{%endif%}
+
+<body>
+ <form method="post">
+
+
+<div class="question5">
+    <h1> Question 5/10</h1>
+    {%if message =='no' %}
+    <h1 class='wrongq1' >Wrong!Try again!</h1>
+    {%endif%}
+    {%if answers =='no' %}
+    <h1 class='wrongq1' >You need to answer all the questions</h1>
+    {%endif%}
+    <h2> Who among the following people founded APPLE? </h2>
+    <div class='answers'>
+        <input type="radio" value="ronald" name="apple" id="ronald" >
+        <label class="answerlabel" for="ronald" >Ronald Wayne</label><br>
+        <input  type="radio" value="Steve_wayne" name="apple" id="Steve_wayne" >
+        <label class="answerlabel" for="Steve_wayne">Steve Wayne</label><br>
+        <input type="radio" value="Elon Musk" name="apple" id="Elon Musk" >
+        <label class="answerlabel" for="Elon Musk" > Elon Musk</label><br>
+        </div>
+       
+        
+</div>
+
+<a class='back' href = '/Question4'> Back </a>
+<input type="submit" value="next" id='mae'>
+ </form>
+</body>
+</html>

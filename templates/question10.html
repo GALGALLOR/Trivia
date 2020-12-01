@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css') }}">
+    <link rel='icon' href='https://previews.123rf.com/images/niyazz/niyazz1309/niyazz130900306/22046368-letters-and-symbols-in-fire-letter-t-.jpg'>
+
+</head>
+
+{% if message=='no' %}
+<style>
+    h2{
+        margin-top: 0;
+    }
+</style>
+{%endif%}
+
+{% if answers=='no' %}
+<style>
+    h2{
+        margin-top: 0;
+    }
+</style>
+{%endif%}
+
+<body>
+ <form method="post">
+
+
+<div class="question10">
+    <h1> Question 10/10</h1>
+    {%if message =='no' %}
+    <h1 class='wrongq1' >Wrong!Try again!</h1>
+    {%endif%}
+    {%if answers =='no' %}
+    <h1 class='wrongq1' >You need to answer all the questions</h1>
+    {%endif%}
+    <h2> How tall is the Tallest building in the world ? </h2>
+    <div class='answers'>
+        <input type="radio" value="2716 feet" name="tallest" id="2716 feet" >
+        <label class="answerlabel" for="2716 feet" >2716 Feet</label><br>
+        <input  type="radio" value="10Km" name="tallest" id="10Km" >
+        <label class="answerlabel" for="10Km">10Km</label><br>
+        <input type="radio" value="2000m" name="tallest" id="2000m" >
+        <label class="answerlabel" for="2000m" > 2000m</label><br>
+        </div>
+       
+        
+</div>
+
+<a class='back' href = '/Question9'> Back </a>
+<input type="submit" value="next" id='mae'>
+ </form>
+</body>
+</html>
