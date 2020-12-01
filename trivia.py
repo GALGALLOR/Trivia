@@ -123,14 +123,16 @@ def done():
 	else:
 		try:
 			names=session['names']
+			current_names=session['names']
 			#insert data into database
 			cursor = mydb.connection.cursor()
 			cursor.execute("INSERT INTO UserData (names,score)VALUES(%s,%s)", (names, marks))
 			mydb.connection.commit()
 			#reveal the data into a leaderBoard
-			cursor.execute('SELECT names,score FROM UserData ORDER BY score DESC ')
+			
+			cursor.execute('SELECT ROW_NUMBER() OVER(ORDER BY score DESC) AS num_row, names, score FROM UserData')
 			names=cursor.fetchall()
-			return render_template('Answersheet.html',names=names,marks=marks)
+			return render_template('Answersheet.html',current_names = current_names,names=names,marks=marks)
 		except:
 			return redirect(url_for('home'))
 

@@ -6,23 +6,29 @@ body{
 	padding:0;
 
 }
+
+
+
 /* home page*/
 .headerHome h1{
+	
 	text-align:center;
 	color:#50728F;
 	font-family:'Times New Roman', Times, serif;
 	font-size:50px;
 }
 .headerHome h2{
+	border-radius: 86%;
+	padding:50px;
 	margin-left: 50px;
 	font-family:'Times New Roman', Times, serif;
 }
 
 .begin{
-	margin-top: 100px;
+	margin-top: 80px;
 	margin-left:250px;
 	border:3px solid #334351 ;
-	padding:30px 0 30px 0;
+	padding:30px 0 20px 0;
 	width:500px;
 	text-align:center;
 	box-sizing: border-box;
@@ -237,10 +243,14 @@ h2{
 	background:rgb(102, 128, 216);
 	padding:10px;
 	margin-left:25%;
+	margin-top:10px;
 	font-size:20px;
 	color:black;
 	transition:1s;
 	border:1px solid darkcyan;
+	border-radius:1cm;
+
+
 }
 #startagain:hover{
 	padding:20px;
@@ -254,4 +264,68 @@ h2{
 	font-size:40px;
 	padding: 20px;
 	margin-top:0;
+	transition:1s;
+}
+
+#leaderboard1:hover{
+	background:rgb(241, 94, 94);
+	padding:30px;
+	font-size:50px;
+	text-decoration: none;
+}
+
+
+th,td{
+	margin:2cm;
+	border-bottom:1px solid black;
+	border-left:1px solid black;
+}
+
+table{
+	background:rgb(44, 165, 98);
+	margin:2cm;
+	border:1px solid black;
+}
+td{
+	padding-right:2cm;
+	padding-left:2cm;
+
+}
+@media screen and (max-width: 1000px) {
+	.begin,.headerHome{
+		width:100%;
+		margin-left:0;
+	}
+	.headerHome h2 {
+		font-size:20px;
+		border-radius:0;
+		margin-left:0;
+		padding-left:5px;
+		width:100%;
+	}
+
+	h2 ,table,.answers{
+		width:100%;
+		margin-left:0;
+	}
+
+	table{
+		margin:0;
+		float:none;
+		width:100%;
+	}
+	tr,td,th{
+		padding:0;
+		margin:0;
+	}
+
+	.navbar li{
+		padding:0;
+	}
+
+	#lll{
+		border-radius:1cm;
+		padding:5px;
+		margin: 5px;
+	}
 }
