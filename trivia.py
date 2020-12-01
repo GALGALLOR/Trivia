@@ -139,7 +139,7 @@ def done():
 @app.route('/leaderboard')
 def leaderboard():
 	cursor = mydb.connection.cursor()
-	cursor.execute('SELECT names,score FROM UserData ORDER BY score DESC ')
+	cursor.execute('SELECT ROW_NUMBER() OVER(ORDER BY score DESC) AS num_row, names, score FROM UserData')
 	names=cursor.fetchall()
 	return render_template('leaderboard.html',names=names,marks=marks)
 

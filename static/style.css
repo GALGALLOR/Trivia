@@ -13,19 +13,23 @@ body{
 .headerHome h1{
 	
 	text-align:center;
-	color:#50728F;
+	color:#00284b;
+	background:white;
+	width:30%;
+	margin-left:40%;
+	border-radius:1cm;
 	font-family:'Times New Roman', Times, serif;
 	font-size:50px;
 }
 .headerHome h2{
-	border-radius: 86%;
+	border-radius: 1cm;
 	padding:50px;
 	margin-left: 50px;
 	font-family:'Times New Roman', Times, serif;
 }
 
 .begin{
-	margin-top: 80px;
+	margin-top: 40px;
 	margin-left:250px;
 	border:3px solid #334351 ;
 	padding:30px 0 20px 0;
@@ -94,7 +98,7 @@ h2{
 	text-align:center;
 	background:#5EED80;
 	padding:0;
-	margin:100px 0 0 200px;
+	margin:40px 0 0 200px;
 	width:700px;
 	padding:20px;
 	opacity:0.9;
@@ -233,8 +237,8 @@ h2{
 	border-radius: 50%;
 	background-color: #6e1e1e;
 }
-#lll{
-	border-radius: 100%;
+#active{
+	border-radius: 0.5cm;;
 	background-color: #6e1e1e;
 	padding:30px;
 }
@@ -265,13 +269,13 @@ h2{
 	padding: 20px;
 	margin-top:0;
 	transition:1s;
+	text-decoration: none;
+	transition:0.5s;
 }
 
 #leaderboard1:hover{
 	background:rgb(241, 94, 94);
-	padding:30px;
-	font-size:50px;
-	text-decoration: none;
+	border:1px solid black;
 }
 
 
@@ -323,7 +327,7 @@ td{
 		padding:0;
 	}
 
-	#lll{
+	#active{
 		border-radius:1cm;
 		padding:5px;
 		margin: 5px;

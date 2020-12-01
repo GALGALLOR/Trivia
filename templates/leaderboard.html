@@ -5,6 +5,8 @@
     <link rel='stylesheet' href="{{url_for('static',filename='style.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>done</title>
+    <link rel='icon' href='https://previews.123rf.com/images/niyazz/niyazz1309/niyazz130900306/22046368-letters-and-symbols-in-fire-letter-t-.jpg'>
+
 </head>
 
 <style>
@@ -18,11 +20,12 @@
             <li><a id='listHome' href='/home'> home </a> </li>
             <li><a href='' >about</a></li>
             <li><a href=''>contact us</a> </li>
-            <li><a id='lll' href='/leaderboard'>leaderboard</a></li>
+            <li><a id='active' href='leaderboard' >leaderboard</a></li>
         </ul>
     </div>
     <table>
         <tr>
+            <th>rank</th>
             <th>Name</th>
             <th>Marks</th>
             <th>Out of:</th>
@@ -31,6 +34,7 @@
         <tr>
             <td>{{data[0]}}</td>
             <td>{{data[1]}}</td>
+            <td>{{data[2]}}</td>
             <td>4</td>
         </tr>
         {%endfor%}
