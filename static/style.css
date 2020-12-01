@@ -11,7 +11,7 @@ body{
 
 /* home page*/
 .headerHome h1{
-	
+
 	text-align:center;
 	color:#00284b;
 	background:white;
@@ -23,7 +23,7 @@ body{
 }
 .headerHome h2{
 	border-radius: 1cm;
-	padding:50px;
+	padding:50px 50px 30px 50px;
 	margin-left: 50px;
 	font-family:'Times New Roman', Times, serif;
 }
@@ -32,7 +32,7 @@ body{
 	margin-top: 40px;
 	margin-left:250px;
 	border:3px solid #334351 ;
-	padding:30px 0 20px 0;
+	padding:10px 0 10px 0;
 	width:500px;
 	text-align:center;
 	box-sizing: border-box;
@@ -148,6 +148,8 @@ h2{
 	padding-left:50px;
 	transition:0.5s;
 }
+
+
 
 .answerlabel:hover{
 	background:yellow;
@@ -313,7 +315,9 @@ td{
 		width:100%;
 		margin-left:0;
 	}
-
+	.answerlabel{
+		padding-right:20px;
+	}
 	table{
 		margin:0;
 		float:none;
