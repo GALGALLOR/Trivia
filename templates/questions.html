@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <link rel='icon' href='https://previews.123rf.com/images/niyazz/niyazz1309/niyazz130900306/22046368-letters-and-symbols-in-fire-letter-t-.jpg'>
+
+</head>
+<body>
+ <form method="post">
+<input type="checkbox" id="next" >
+<input type="checkbox" id='next2'>
+<input type='checkbox' id='next3'>
+
+<div class="question1">
+    <h1>1.</h1>
+    <h2> what is the first president of Kenya? </h2>
+<div class="answers">
+    <input type="radio" value="uhuru" name="president" id="uhuru" >
+    <label class='answerlabel'  for="uhuru" >uhuru</label><br>
+    <input type="radio" value="kenyatta" name="president" id="kenyatta" >
+    <label class='answerlabel' for="kenyatta">kenyatta</label><br>
+    <input type="radio" value="raila" name="president" id="raila" >
+    <label class='answerlabel' for="raila" > raila</label><br>
+</div>
+        <a id="firstnext" ><label id="qqnext" for="next"> Next </label></a>
+
+</div>
+
+
+
+<div class="question2">
+    <h1> Question2 out of 2 </h1>
+    <h2> When was the first world war? </h2>
+    <div class='answers'>
+    <input type="radio" value="2020" name="ww1" id="2020" >
+    <label class="answerlabel" for="2020" >2020</label><br>
+    <input  type="radio" value="1918" name="ww1" id="1918" >
+    <label class="answerlabel" for="1918">1918</label><br>
+    <input type="radio" value="1944" name="ww1" id="1944" >
+    <label class="answerlabel" for="1944" > 1944</label><br>
+    </div>
+    <label id="firstback" for="next">Back</label>
+    <label id='next2' for='next2'>Next</label>
+</div>
+
+<div class="question3">
+    <h1> Question 3 out of 3 </h1>
+    <h2> how old is obama </h2>
+    <div class='answers'>
+        <input type="radio" value="48" name="ageobama" id="48" >
+        <label class="answerlabel" for="48" >48</label><br>
+        <input  type="radio" value="58" name="ageobama" id="58" >
+        <label class="answerlabel" for="58">58</label><br>
+        <input type="radio" value="68" name="ageobama" id="68" >
+        <label class="answerlabel" for="68" > 68</label><br>
+        </div>
+        <label for="next2">Back</label>
+        <label  for='next3'>Next</label>
+</div>
+
+<div class="question4">
+    <h1> Question 4 out of 4</h1>
+    <h2> When was the first world war? </h2>
+    <div class='answers'>
+        <input type="radio" value="2020" name="ww1" id="2020" >
+        <label class="answerlabel" for="2020" >2020</label><br>
+        <input  type="radio" value="1918" name="ww1" id="1918" >
+        <label class="answerlabel" for="1918">1918</label><br>
+        <input type="radio" value="1944" name="ww1" id="1944" >
+        <label class="answerlabel" for="1944" > 1944</label><br>
+        </div>
+        <label  for="next3">Back</label>
+        
+</div>
+<input type="submit" value="submit" id='mae'>
+ </form>
+</body>
+</html>

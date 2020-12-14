@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>done</title>
     <link rel='icon' href='https://previews.123rf.com/images/niyazz/niyazz1309/niyazz130900306/22046368-letters-and-symbols-in-fire-letter-t-.jpg'>
-
-</head>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script></head>
 
 <style>
 
@@ -15,11 +14,15 @@
 </style>
 
 <body>
+    <div class="idkwtf">
+    <input type='checkbox' id='bars'>
     <div class="navbar">
+        <label class='checkbars' for='bars'><i class='fas fa-bars' ></i></label>
         <ul>
+            
             <li><a id='listHome' href='/home'> home </a> </li>
-            <li><a href='' >about</a></li>
-            <li><a href=''>contact us</a> </li>
+            <li><a href='#about' >about</a></li>
+            <li><a href='#about'>contact us</a> </li>
             <li><a id='active' href='leaderboard' >leaderboard</a></li>
         </ul>
     </div>
@@ -31,14 +34,46 @@
             <th>Out of:</th>
         </tr>
         {%for data in names%}
-        <tr>
-            <td>{{data[0]}}</td>
-            <td>{{data[1]}}</td>
-            <td>{{data[2]}}</td>
-            <td>10</td>
-        </tr>
-        {%endfor%}
-    </table>
+        {%if data[0] >1 %}
 
+        <tr>
+            <td style='background:rgb(58, 194, 103);' >{{data[0]}}</td>
+            <td style='background:rgb(58, 194, 103);' >{{data[1]}}</td>
+            <td style='background:rgb(58, 194, 103);' >{{data[2]}}</td>
+            <td style='background:rgb(58, 194, 103);' >10</td>
+        </tr>
+        {%elif data[0] ==1 %}
+
+        <tr>
+            
+            <td style='background:rgb(214, 95, 27);' ><i class='fas fa-crown' ></i>{{data[0]}}</td>
+            <td style='background:rgb(214, 95, 27);' >{{data[1]}}</td>
+            <td style='background:rgb(214, 95, 27);' >{{data[2]}}</td>
+            <td style='background:rgb(214, 95, 27);' >10</td>
+        </tr>
+        {%else%}
+<tr>
+    <td>{{data[0]}}</td>
+    <td>{{data[1]}}</td>
+    <td>{{data[2]}}</td>
+    <td>10</td>
+</tr>
+
+{%endif%}
+
+
+{%endfor%}
+    </table>
+    <div id='about' class="about">
+        <h3>ABOUT</h3>
+        <p>
+            This is a website designed to sharpen deep thinking and logical elimination of false answers.
+        <br>invite your friends and Compete
+        <br>and most importantly,<br>  <h3>HAVE FUN</h3>
+        </p>
+        <label>Contact us at +254759274504</label><br>
+        <label>Email us at: galgalloroba.gr.gr.gr@gmail.com</label>
+    </div>
+    </div>
 </body>
 </html>

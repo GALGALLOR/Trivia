@@ -12,11 +12,13 @@
 
 
 <body>
+    <input type='checkbox' id='bars'>
     <div class="navbar">
+        <label class='checkbars' for='bars'><i class='fas fa-bars' ></i></label>
         <ul>
             <li><a id='listHome' href='/home'> home </a> </li>
-            <li><a href='' >about</a></li>
-            <li><a href=''>contact us</a> </li>
+            <li><a href='#about' >about</a></li>
+            <li><a href='#about'>contact us</a> </li>
         </ul>
     </div>
     <form method='post'>
@@ -47,6 +49,15 @@
         </tr>
         {%endfor%}
     </table>
-
+    <div id='about' class="about">
+        <h3>ABOUT</h3>
+        <p>
+            This is a website designed to sharpen deep thinking and logical elimination of false answers.
+        <br>invite your friends and Compete
+        <br>and most importantly,<br>  <h3>HAVE FUN</h3>
+        </p>
+        <label>Contact us at +254759274504</label><br>
+        <label>Email us at: galgalloroba.gr.gr.gr@gmail.com</label>
+    </div>
 </body>
 </html>

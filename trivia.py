@@ -301,7 +301,7 @@ def done():
 			mydb.connection.commit()
 			#reveal the data into a leaderBoard
 			
-			cursor.execute('SELECT ROW_NUMBER() OVER() AS num_row, names, score FROM UserData ORDER BY score DESC ')
+			cursor.execute('SELECT ROW_NUMBER() OVER(ORDER BY score DESC) AS num_row, names, score FROM UserData  ')
 			names=cursor.fetchall()
 			return render_template('Answersheet.html',current_names = current_names,names=names,marks=marks)
 		except:
